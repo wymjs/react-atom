@@ -1,0 +1,39 @@
+{
+  "name": "null",
+  "version": "",
+  "type": "module",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "readme.md"
+  ],
+  "scripts": {
+    "vite-dev": "vite",
+    "vite-build": "tsc && vite build",
+    "vite-preview": "vite preview"
+  },
+  "keywords": [
+    "wtbx",
+    "typescript",
+    "react",
+    "store manager"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@wymjs/react-atom": "link:.."
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}
