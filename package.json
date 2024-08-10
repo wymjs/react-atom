@@ -16,7 +16,7 @@
     "format": "prettier --cache --write",
     "prepare": "husky install"
   },
-  "homepage": "https://github.com/wymjs/react-atom/",
+  "homepage": "https://github.com/wymjs/react-atom",
   "keywords": [
     "wymjs",
     "typescript",
