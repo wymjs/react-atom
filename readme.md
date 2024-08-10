@@ -1,4 +1,4 @@
-wtbx-react-atom
+@wymjs/react-atom
 ===
 
 > 極簡 react18+ 原子狀態管理
@@ -6,12 +6,12 @@ wtbx-react-atom
 # 快速開始
 
 ```typescript jsx
-import { watom } from 'wtbx-react-atom'
+import { atom } from '@wymjs/react-atom'
 
 // 申明原子狀態
-const countAtom = watom<number>(0)
+const countAtom = atom<number>(0)
 // 可以使用 get => T 的方式申明，get 方法傳入其他的原子將達成派生效果
-const doubleCountAtom = watom<number>(get => get(countAtom) * 2)
+const doubleCountAtom = atom<number>(get => get(countAtom) * 2)
 
 // 返回的為暫停函數，若寫在 useEffect 中可以直接 return countAtom.watch(...)
 const stop = countAtom.watch((before, after) => {
@@ -73,8 +73,8 @@ export function Counter() {
 
 # API
 
-- `watom(T)` **返回 Proxy(下做 p)** 申明一個原子狀態
-- `watom((get: (atom: Atom<T>) => T) => T)` **返回 Proxy(下做 p)** 使用 get 取得其他原子的值並關聯變化
+- `atom(T)` **返回 Proxy(下做 p)** 申明一個原子狀態
+- `atom((get: (atom: Atom<T>) => T) => T)` **返回 Proxy(下做 p)** 使用 get 取得其他原子的值並關聯變化
 - `p`
   - `p(T)` **返回 void** 以傳入的值替換將原本的值
   - `p((before: T) => T)` **返回 void** 以函數的方式將返的的值替換將原本的值
