@@ -1,6 +1,6 @@
 {
   "name": "@wymjs/react-atom",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "極簡 react18+ 原子狀態管理",
   "main": "dist/index.js",
