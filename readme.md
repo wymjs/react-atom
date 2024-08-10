@@ -3,7 +3,14 @@
 
 > 極簡 react18+ 原子狀態管理
 
-# 快速開始
+## 安裝
+
+```shell
+# react 為關聯依賴
+pnpm i @wymjs/react-atom react
+```
+
+## 使用
 
 ```typescript jsx
 import { atom } from '@wymjs/react-atom'
