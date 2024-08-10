@@ -78,7 +78,7 @@ export function Counter() {
 }
 ```
 
-# API
+## API
 
 - `atom(T)` **返回 Proxy(下做 p)** 申明一個原子狀態
 - `atom((get: (atom: Atom<T>) => T) => T)` **返回 Proxy(下做 p)** 使用 get 取得其他原子的值並關聯變化
