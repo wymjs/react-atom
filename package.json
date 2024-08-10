@@ -1,6 +1,6 @@
 {
   "name": "@wymjs/react-atom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "極簡 react18+ 原子狀態管理",
   "main": "dist/index.js",
@@ -11,14 +11,14 @@
   ],
   "scripts": {
     "build-package": "tsup src/index.ts --format esm --dts --clean",
-    "publish-package": "pnpm run build-package && npm publish",
+    "publish-package": "pnpm run build-package && npm publish --access public",
     "lint": "eslint --fix --no-ignore --max-warnings=0",
     "format": "prettier --cache --write",
     "prepare": "husky install"
   },
   "homepage": "https://github.com/wymjs/react-atom/",
   "keywords": [
-    "wtbx",
+    "wymjs",
     "typescript",
     "react",
     "store manager"
