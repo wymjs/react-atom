@@ -13,7 +13,7 @@ export type AtomApis<T> = Record<typeof REF_K_USE, () => T> &
 	Record<typeof REF_K_WATCH, Watch<T>> &
 	Record<typeof REF_K_VALUE, T>
 
-export type Atom<T> = T & AtomUpdater<T> & AtomApis<T>
+export type Atom<T> = AtomUpdater<T> & AtomApis<T>
 
 export type AtomInitialCombineFunction<T> = (
 	get: <M extends Atom<any>>(atom: M) => M extends Atom<infer MT> ? MT : never,
@@ -112,7 +112,7 @@ function emitCombinerAtoms(
 	if (!combinerAtoms) return
 
 	combinerAtoms.forEach(combineAtom => {
-		combineAtom[REF_PK_COMBINE_VALUE]()
+		combineAtom[REF_PK_COMBINE_VALUE]!()
 		emitListener(combineAtom, oldValue, newValue)
 	})
 }

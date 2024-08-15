@@ -10,7 +10,7 @@
     "readme.md"
   ],
   "scripts": {
-    "build-package": "tsup src/index.ts --format esm --dts --clean",
+    "build-package": "tsup src/index.ts --external react --format esm --dts --clean",
     "publish-package": "pnpm run build-package && npm publish --access public",
     "lint": "eslint --fix --no-ignore --max-warnings=0",
     "format": "prettier --cache --write",
